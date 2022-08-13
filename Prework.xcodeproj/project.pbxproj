@@ -16,6 +16,7 @@
 		A1E1448328A651EC002460A0 /* PreworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E1448228A651EC002460A0 /* PreworkTests.swift */; };
 		A1E1448D28A651EC002460A0 /* PreworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E1448C28A651EC002460A0 /* PreworkUITests.swift */; };
 		A1E1448F28A651EC002460A0 /* PreworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E1448E28A651EC002460A0 /* PreworkUITestsLaunchTests.swift */; };
+		A1E1449C28A745C4002460A0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E1449B28A745C4002460A0 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A1E1448828A651EC002460A0 /* PreworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E1448C28A651EC002460A0 /* PreworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkUITests.swift; sourceTree = "<group>"; };
 		A1E1448E28A651EC002460A0 /* PreworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1E1449B28A745C4002460A0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A1E1446D28A651E8002460A0 /* SceneDelegate.swift */,
 				A1E1446F28A651E8002460A0 /* ViewController.swift */,
 				A1E1447128A651E8002460A0 /* Main.storyboard */,
+				A1E1449B28A745C4002460A0 /* SettingsViewController.swift */,
 				A1E1447428A651EC002460A0 /* Assets.xcassets */,
 				A1E1447628A651EC002460A0 /* LaunchScreen.storyboard */,
 				A1E1447928A651EC002460A0 /* Info.plist */,
@@ -261,6 +264,7 @@
 				A1E1447028A651E8002460A0 /* ViewController.swift in Sources */,
 				A1E1446C28A651E8002460A0 /* AppDelegate.swift in Sources */,
 				A1E1446E28A651E8002460A0 /* SceneDelegate.swift in Sources */,
+				A1E1449C28A745C4002460A0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
