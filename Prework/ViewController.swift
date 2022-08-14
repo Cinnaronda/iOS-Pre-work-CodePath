@@ -15,23 +15,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
     
+    let defaultValues = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        // If there is no last tip value, set last tip value to current value
+        if defaultValues.object(forKey: "lastTipVal") == nil {
+            defaultValues.set(tipControl.selectedSegmentIndex, forKey: "lastTipVal")
+        }
+        
         // Sets the title in the Navigation Bar
             self.title = "Tip Calculator"
     }
     
-    /*
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will appear")
-        // This is a good place to retrieve the default tip percentage from UserDefaults
+        
+        // This is a good place to retrieve the default tip percentage from UserDefaults, note this functions runs after viewDidLoad
+        let oldSelectedVal = defaultValues.value(forKey: "lastTipVal") as! Int
+
         // and use it to update the tip amount
+        tipControl.selectedSegmentIndex = oldSelectedVal
     }
 
+    /*
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("view did appear")
@@ -51,6 +63,9 @@ class ViewController: UIViewController {
     @IBAction func calculateTip(_ sender: Any) {
         // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
+        
+        // Update last value
+        defaultValues.set(tipControl.selectedSegmentIndex, forKey: "lastTipVal")
         
         // Get Total tip by multiplying tip by tipPercentage
         let tipPercentages = [0.15, 0.18, 0.2]
