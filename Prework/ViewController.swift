@@ -22,10 +22,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // If there is no last tip value, set last tip value to current value
-        if defaultValues.object(forKey: "lastTipVal") == nil {
+        // Check to see if time last accessed was over 10 minutes, if so, restart state
+        
+        /*
+        let theTime = NSDate.now
+        sleep(65)
+        let passingMinutes = theTime.timeIntervalSinceNow * -1 / 60
+        print(passingMinutes)
+         */
+        
+        
+        if defaultValues.object(forKey: "lastTime") == nil || (defaultValues.value(forKey: "lastTime") as! Date).timeIntervalSinceNow * -1 / 60 >= 10 {
             defaultValues.set(tipControl.selectedSegmentIndex, forKey: "lastTipVal")
+            //defaultValues.set(NSDate.now, forKey: "lastTime")
+            //print("over a minute, blank state loaded")
+        } else {
+            //print("not over a minute")
+            // If there is no last tip value, set last tip value to current value
+            if defaultValues.object(forKey: "lastTipVal") == nil {
+                defaultValues.set(tipControl.selectedSegmentIndex, forKey: "lastTipVal")
+                //defaultValues.set(NSDate.now, forKey: "lastTime")
+            }
         }
+        
         
         // Sets the title in the Navigation Bar
             self.title = "Tip Calculator"
@@ -43,7 +62,7 @@ class ViewController: UIViewController {
         tipControl.selectedSegmentIndex = oldSelectedVal
     }
 
-    /*
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("view did appear")
@@ -52,13 +71,14 @@ class ViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("view will disappear")
+        defaultValues.set(NSDate.now, forKey: "lastTime")
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("view did disappear")
     }
-    */
+    
 
     @IBAction func calculateTip(_ sender: Any) {
         // Get bill amount from text field input
