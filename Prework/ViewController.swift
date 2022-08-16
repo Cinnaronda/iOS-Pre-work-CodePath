@@ -19,6 +19,14 @@ class ViewController: UIViewController {
     let defaultValues = UserDefaults.standard
     
     @IBAction func billFieldChanged(_ sender: Any) {
+        // Get bill amount from text field input
+        let update = Double(billAmountTextField.text!) ?? 0
+        
+        // Update Bill Amount Label
+        billAmountDisplay.text = String(format: "$%.2f", update)
+        
+        // Call for tip calculation
+        calculateTip(self)
         
     }
     

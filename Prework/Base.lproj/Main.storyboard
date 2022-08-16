@@ -128,7 +128,7 @@
                         <outlet property="billAmountTextField" destination="BPE-E8-For" id="lt0-0j-RuT"/>
                         <outlet property="tipAmountLabel" destination="iiH-f0-G8P" id="YGk-lF-1RS"/>
                         <outlet property="tipControl" destination="mFx-mg-bfA" id="ebQ-s5-NZ1"/>
-                        <outlet property="totalLabel" destination="1NJ-Nw-sZ9" id="uoq-qi-fb4"/>
+                        <outlet property="totalLabel" destination="8l8-PL-TuY" id="1Hu-4f-TTt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
