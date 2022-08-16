@@ -45,7 +45,8 @@ class ViewController: UIViewController {
         
         
         // Sets the title in the Navigation Bar
-            self.title = "Tip Calculator"
+            //self.title = "Tip Buddy"
+        
     }
     
     
