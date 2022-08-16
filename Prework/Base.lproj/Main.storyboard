@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -85,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NJ-Nw-sZ9" userLabel="Bill Amount">
-                                <rect key="frame" x="30" y="283" width="169" height="43"/>
+                                <rect key="frame" x="30" y="276" width="169" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="34"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.93725490199999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -99,7 +100,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-f0-G8P" userLabel="Tip Amount">
-                                <rect key="frame" x="208" y="283" width="169" height="43"/>
+                                <rect key="frame" x="208" y="276" width="169" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Comfortaa-Regular" family="Comfortaa" pointSize="34"/>
                                 <color key="textColor" red="0.98039215686274506" green="0.93725490196078431" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
@@ -107,16 +108,21 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.36470588235294116" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="UBd-8F-hW0">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="8db-ip-oNT">
+                            <inset key="imageInsets" minX="0.0" minY="16" maxX="0.0" maxY="0.0"/>
+                            <inset key="largeContentSizeImageInsets" minX="0.0" minY="15" maxX="0.0" maxY="0.0"/>
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b4t-1L-kLH">
-                                <rect key="frame" x="307" y="5" width="87" height="34.5"/>
+                                <rect key="frame" x="307" y="0.0" width="87" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.99824440479999998" blue="0.99531155819999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button" backgroundImage="gearshape.fill" catalog="system"/>
-                                <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" title="" imagePadding="0.0" buttonSize="large">
+                                    <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25" scale="large"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="wH7-4e-WXP" kind="show" id="YMY-cA-Jbu"/>
                                 </connections>
@@ -127,8 +133,14 @@
                     <connections>
                         <outlet property="billAmountDisplay" destination="1NJ-Nw-sZ9" id="k0u-5U-nTf"/>
                         <outlet property="billAmountTextField" destination="BPE-E8-For" id="lt0-0j-RuT"/>
+                        <outlet property="billDisplay" destination="uy0-O0-P6y" id="wGy-L1-uyV"/>
+                        <outlet property="literalBillAmountDisplay" destination="EBf-GZ-iou" id="m29-nE-96Y"/>
+                        <outlet property="settingsButton" destination="b4t-1L-kLH" id="Nds-VD-bF5"/>
                         <outlet property="tipAmountLabel" destination="iiH-f0-G8P" id="YGk-lF-1RS"/>
                         <outlet property="tipControl" destination="mFx-mg-bfA" id="ebQ-s5-NZ1"/>
+                        <outlet property="tipDisplay" destination="vMN-SS-kgK" id="POb-5n-EOG"/>
+                        <outlet property="tipPercentageDisplay" destination="6iq-XS-b8n" id="RK2-Gd-0rN"/>
+                        <outlet property="totalDisplay" destination="bHG-o5-Qig" id="a3E-go-bIl"/>
                         <outlet property="totalLabel" destination="8l8-PL-TuY" id="1Hu-4f-TTt"/>
                     </connections>
                 </viewController>
@@ -173,6 +185,7 @@
     </scenes>
     <color key="tintColor" red="1" green="0.0" blue="0.3687380850315094" alpha="0.86715525270000005" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

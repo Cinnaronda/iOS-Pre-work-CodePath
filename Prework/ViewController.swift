@@ -14,9 +14,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
+    
     @IBOutlet weak var billAmountDisplay: UILabel!
     
+    // String Displays
+    @IBOutlet weak var billDisplay: UILabel!
+    @IBOutlet weak var totalDisplay: UILabel!
+    @IBOutlet weak var tipDisplay: UILabel!
+    @IBOutlet weak var literalBillAmountDisplay: UILabel!
+    @IBOutlet weak var tipPercentageDisplay: UILabel!
+    
     let defaultValues = UserDefaults.standard
+    
+    @IBOutlet weak var settingsButton: UIButton!
+    
     
     @IBAction func billFieldChanged(_ sender: Any) {
         // Get bill amount from text field input
@@ -66,6 +77,15 @@ class ViewController: UIViewController {
         // Keep keyboard up
         billAmountTextField.becomeFirstResponder()
         
+        self.totalDisplay.font = UIFont(name: "Comfortaa", size: 42)
+        self.billDisplay.font = UIFont(name: "Comfortaa", size: 29)
+        self.tipDisplay.font = UIFont(name: "Comfortaa", size: 29)
+        self.literalBillAmountDisplay.font = UIFont(name: "Comfortaa", size: 30)
+        self.tipPercentageDisplay.font = UIFont(name: "Comfortaa", size: 30)
+        self.totalLabel.font = UIFont(name: "Comfortaa", size: 59)
+        self.billAmountDisplay.font = UIFont(name: "Comfortaa", size: 34)
+        self.tipAmountLabel.font = UIFont(name: "Comfortaa", size: 34)
+
         
     }
 
