@@ -14,9 +14,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var billAmountDisplay: UILabel!
     
     let defaultValues = UserDefaults.standard
     
+    @IBAction func billFieldChanged(_ sender: Any) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

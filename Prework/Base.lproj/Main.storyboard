@@ -42,6 +42,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="billFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="buM-eL-NVO"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bill amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBf-GZ-iou" userLabel="Bill Amount Label">
                                         <rect key="frame" x="35" y="44" width="229" height="41"/>
@@ -121,10 +124,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="billAmountDisplay" destination="1NJ-Nw-sZ9" id="k0u-5U-nTf"/>
                         <outlet property="billAmountTextField" destination="BPE-E8-For" id="lt0-0j-RuT"/>
                         <outlet property="tipAmountLabel" destination="iiH-f0-G8P" id="YGk-lF-1RS"/>
                         <outlet property="tipControl" destination="mFx-mg-bfA" id="ebQ-s5-NZ1"/>
-                        <outlet property="totalLabel" destination="8l8-PL-TuY" id="C5a-Sp-LYy"/>
+                        <outlet property="totalLabel" destination="1NJ-Nw-sZ9" id="uoq-qi-fb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
