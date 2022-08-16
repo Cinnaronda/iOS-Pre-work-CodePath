@@ -58,6 +58,14 @@ class ViewController: UIViewController {
 
         // and use it to update the tip amount
         tipControl.selectedSegmentIndex = oldSelectedVal
+        
+        // Change keyboard to decimal type
+        billAmountTextField.keyboardType = UIKeyboardType.decimalPad
+        
+        // Keep keyboard up
+        billAmountTextField.becomeFirstResponder()
+        
+        
     }
 
     /*
