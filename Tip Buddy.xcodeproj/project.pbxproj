@@ -43,7 +43,7 @@
 		A10A3BB128AC0B84007835B1 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
 		A10A3BB228AC0B84007835B1 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		A10A3BB328AC0B84007835B1 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
-		A1E1446828A651E8002460A0 /* Prework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E1446828A651E8002460A0 /* Tip Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E1446B28A651E8002460A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E1446D28A651E8002460A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A1E1446F28A651E8002460A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,9 +51,9 @@
 		A1E1447428A651EC002460A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1E1447728A651EC002460A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1E1447928A651EC002460A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1E1447E28A651EC002460A0 /* PreworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E1447E28A651EC002460A0 /* Tip BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E1448228A651EC002460A0 /* PreworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkTests.swift; sourceTree = "<group>"; };
-		A1E1448828A651EC002460A0 /* PreworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E1448828A651EC002460A0 /* Tip BuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip BuddyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E1448C28A651EC002460A0 /* PreworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkUITests.swift; sourceTree = "<group>"; };
 		A1E1448E28A651EC002460A0 /* PreworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A1E1449B28A745C4002460A0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -107,9 +107,9 @@
 		A1E1446928A651E8002460A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1E1446828A651E8002460A0 /* Prework.app */,
-				A1E1447E28A651EC002460A0 /* PreworkTests.xctest */,
-				A1E1448828A651EC002460A0 /* PreworkUITests.xctest */,
+				A1E1446828A651E8002460A0 /* Tip Buddy.app */,
+				A1E1447E28A651EC002460A0 /* Tip BuddyTests.xctest */,
+				A1E1448828A651EC002460A0 /* Tip BuddyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1E1446728A651E8002460A0 /* Prework */ = {
+		A1E1446728A651E8002460A0 /* Tip Buddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1E1449228A651EC002460A0 /* Build configuration list for PBXNativeTarget "Prework" */;
+			buildConfigurationList = A1E1449228A651EC002460A0 /* Build configuration list for PBXNativeTarget "Tip Buddy" */;
 			buildPhases = (
 				A1E1446428A651E8002460A0 /* Sources */,
 				A1E1446528A651E8002460A0 /* Frameworks */,
@@ -162,14 +162,14 @@
 			);
 			dependencies = (
 			);
-			name = Prework;
+			name = "Tip Buddy";
 			productName = Prework;
-			productReference = A1E1446828A651E8002460A0 /* Prework.app */;
+			productReference = A1E1446828A651E8002460A0 /* Tip Buddy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A1E1447D28A651EC002460A0 /* PreworkTests */ = {
+		A1E1447D28A651EC002460A0 /* Tip BuddyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1E1449528A651EC002460A0 /* Build configuration list for PBXNativeTarget "PreworkTests" */;
+			buildConfigurationList = A1E1449528A651EC002460A0 /* Build configuration list for PBXNativeTarget "Tip BuddyTests" */;
 			buildPhases = (
 				A1E1447A28A651EC002460A0 /* Sources */,
 				A1E1447B28A651EC002460A0 /* Frameworks */,
@@ -180,14 +180,14 @@
 			dependencies = (
 				A1E1448028A651EC002460A0 /* PBXTargetDependency */,
 			);
-			name = PreworkTests;
+			name = "Tip BuddyTests";
 			productName = PreworkTests;
-			productReference = A1E1447E28A651EC002460A0 /* PreworkTests.xctest */;
+			productReference = A1E1447E28A651EC002460A0 /* Tip BuddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A1E1448728A651EC002460A0 /* PreworkUITests */ = {
+		A1E1448728A651EC002460A0 /* Tip BuddyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1E1449828A651EC002460A0 /* Build configuration list for PBXNativeTarget "PreworkUITests" */;
+			buildConfigurationList = A1E1449828A651EC002460A0 /* Build configuration list for PBXNativeTarget "Tip BuddyUITests" */;
 			buildPhases = (
 				A1E1448428A651EC002460A0 /* Sources */,
 				A1E1448528A651EC002460A0 /* Frameworks */,
@@ -198,9 +198,9 @@
 			dependencies = (
 				A1E1448A28A651EC002460A0 /* PBXTargetDependency */,
 			);
-			name = PreworkUITests;
+			name = "Tip BuddyUITests";
 			productName = PreworkUITests;
-			productReference = A1E1448828A651EC002460A0 /* PreworkUITests.xctest */;
+			productReference = A1E1448828A651EC002460A0 /* Tip BuddyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A1E1446328A651E8002460A0 /* Build configuration list for PBXProject "Prework" */;
+			buildConfigurationList = A1E1446328A651E8002460A0 /* Build configuration list for PBXProject "Tip Buddy" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -239,9 +239,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1E1446728A651E8002460A0 /* Prework */,
-				A1E1447D28A651EC002460A0 /* PreworkTests */,
-				A1E1448728A651EC002460A0 /* PreworkUITests */,
+				A1E1446728A651E8002460A0 /* Tip Buddy */,
+				A1E1447D28A651EC002460A0 /* Tip BuddyTests */,
+				A1E1448728A651EC002460A0 /* Tip BuddyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,12 +310,12 @@
 /* Begin PBXTargetDependency section */
 		A1E1448028A651EC002460A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A1E1446728A651E8002460A0 /* Prework */;
+			target = A1E1446728A651E8002460A0 /* Tip Buddy */;
 			targetProxy = A1E1447F28A651EC002460A0 /* PBXContainerItemProxy */;
 		};
 		A1E1448A28A651EC002460A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A1E1446728A651E8002460A0 /* Prework */;
+			target = A1E1446728A651E8002460A0 /* Tip Buddy */;
 			targetProxy = A1E1448928A651EC002460A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -475,7 +475,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sharonda.Prework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tip Buddy";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,7 +503,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sharonda.Prework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tip Buddy";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,7 +526,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prework.app/Prework";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tip Buddy.app/Tip Buddy";
 			};
 			name = Debug;
 		};
@@ -546,7 +546,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prework.app/Prework";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tip Buddy.app/Tip Buddy";
 			};
 			name = Release;
 		};
@@ -589,7 +589,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1E1446328A651E8002460A0 /* Build configuration list for PBXProject "Prework" */ = {
+		A1E1446328A651E8002460A0 /* Build configuration list for PBXProject "Tip Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1E1449028A651EC002460A0 /* Debug */,
@@ -598,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1E1449228A651EC002460A0 /* Build configuration list for PBXNativeTarget "Prework" */ = {
+		A1E1449228A651EC002460A0 /* Build configuration list for PBXNativeTarget "Tip Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1E1449328A651EC002460A0 /* Debug */,
@@ -607,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1E1449528A651EC002460A0 /* Build configuration list for PBXNativeTarget "PreworkTests" */ = {
+		A1E1449528A651EC002460A0 /* Build configuration list for PBXNativeTarget "Tip BuddyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1E1449628A651EC002460A0 /* Debug */,
@@ -616,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1E1449828A651EC002460A0 /* Build configuration list for PBXNativeTarget "PreworkUITests" */ = {
+		A1E1449828A651EC002460A0 /* Build configuration list for PBXNativeTarget "Tip BuddyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1E1449928A651EC002460A0 /* Debug */,
