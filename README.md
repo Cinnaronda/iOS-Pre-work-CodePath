@@ -4,7 +4,7 @@ iOS Tip Calculator is a tip calculator application for iOS.
 
 Submitted by: Sharonda Daniels
 
-Time spent: 3.4 hours spent in total
+Time spent: 12.8 hours spent in total
 
 ## User Stories
 
@@ -37,6 +37,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+- After getting the keyboard to stay up I had a problem with my viewWillDisappear and my viewDidDisappear methods not working, I was never able to figure out how to fix them but I noticed when I take out the keyboard as first responder it works again
 - This wasn't necessarily a challenge, but I was wondering if the built-in Source Control on XCode is recommended.
 
 ## License
