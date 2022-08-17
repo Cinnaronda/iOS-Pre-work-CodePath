@@ -24,7 +24,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var literalBillAmountDisplay: UILabel!
     @IBOutlet weak var tipPercentageDisplay: UILabel!
     
+    @IBOutlet weak var bottomView: UIView!
     let defaultValues = UserDefaults.standard
+    public var percentageToUse = 0
+
+    
+    
+    @IBAction func segmentSelected(_ sender: Any) {
+        if tipControl.selectedSegmentIndex == 3 {
+            // create the alert
+            
+            let alert = UIAlertController(title: "Tip Percentage", message: "Enter the percentage you would like to tip.", preferredStyle: UIAlertController.Style.alert)
+            
+            alert.view.tintColor = UIColor.init(red: 1, green: 0, blue: 94/255, alpha: 1)
+
+            alert.addTextField {
+                (customPercentage) in
+                customPercentage.placeholder = "%"
+                customPercentage.keyboardType = UIKeyboardType.numberPad
+            }
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { [weak alert] (_) in
+                let field = alert?.textFields![0]
+                self.percentageToUse = Int(field!.text ?? "") ?? -1
+                self.defaultValues.set(self.percentageToUse, forKey: "percentToUse")
+                self.calculateTip(self)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        } else {
+            self.calculateTip(self)
+        }
+    }
+    
+    
     
     @IBOutlet weak var settingsButton: UIButton!
     
@@ -40,6 +73,7 @@ class ViewController: UIViewController {
         calculateTip(self)
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +92,14 @@ class ViewController: UIViewController {
         // Sets the title in the Navigation Bar
             //self.title = "Tip Buddy"
         
+        let bottom = CALayer()
+        bottom.frame = CGRect(x: 0, y: billAmountTextField.frame.height - 2, width: billAmountTextField.frame.width, height: 2)
+        
+        bottom.backgroundColor = UIColor.gray.cgColor
+        
+        billAmountTextField.borderStyle = UITextField.BorderStyle.none
+        billAmountTextField.layer.addSublayer(bottom)
+
     }
     
     
@@ -70,6 +112,13 @@ class ViewController: UIViewController {
 
         // and use it to update the tip amount
         tipControl.selectedSegmentIndex = oldSelectedVal
+        
+        
+         if oldSelectedVal == 3 {
+             self.percentageToUse = defaultValues.value(forKey: "percentToUse") as! Int
+             print(percentageToUse)
+         }
+         
         
         // Change keyboard to decimal type
         billAmountTextField.keyboardType = UIKeyboardType.decimalPad
@@ -85,9 +134,12 @@ class ViewController: UIViewController {
         self.totalLabel.font = UIFont(name: "Comfortaa", size: 59)
         self.billAmountDisplay.font = UIFont(name: "Comfortaa", size: 34)
         self.tipAmountLabel.font = UIFont(name: "Comfortaa", size: 34)
-
+        self.bottomView.layer.cornerRadius = 10
+        
+        self.view.backgroundColor = SettingsViewController.colorSelected
         
     }
+    
 
     /*
     override func viewDidAppear(_ animated: Bool) {
@@ -102,15 +154,15 @@ class ViewController: UIViewController {
         // When the app is on the way to being closed, record the time it was last accessed
         defaultValues.set(NSDate.now, forKey: "lastTime")
     }
-
-    /*
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("view did disappear")
-    }*/
+    }
+    
     
 
-    @IBAction func calculateTip(_ sender: Any) {
+    func calculateTip(_ sender: Any) {
         // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
         
@@ -118,7 +170,7 @@ class ViewController: UIViewController {
         defaultValues.set(tipControl.selectedSegmentIndex, forKey: "lastTipVal")
         
         // Get Total tip by multiplying tip by tipPercentage
-        let tipPercentages = [0.15, 0.18, 0.2]
+        let tipPercentages = [0.15, 0.18, 0.2, Double(percentageToUse) * 0.01]
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         
@@ -127,6 +179,9 @@ class ViewController: UIViewController {
         
         // Update Total Amount
         totalLabel.text = String(format: "$%.2f", total)
+        
+        defaultValues.set(NSDate.now, forKey: "lastTime")
+
         
     }
     
