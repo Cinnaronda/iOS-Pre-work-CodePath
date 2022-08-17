@@ -176,44 +176,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-Z6-DnG">
-                                <rect key="frame" x="20" y="109" width="87" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank you for using TipBuddy! :)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85R-JA-W2g">
+                                <rect key="frame" x="53" y="378" width="291" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colors:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-Z6-DnG">
+                                <rect key="frame" x="39" y="121" width="121" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFA-uY-O1J">
-                                <rect key="frame" x="10" y="154" width="70" height="50"/>
+                                <rect key="frame" x="172" y="125" width="65" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.89803921568627454" green="0.36470588235294116" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="27"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pinkColorRequested:" destination="wH7-4e-WXP" eventType="touchUpInside" id="Wyt-0h-qFo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW1-Jf-l9f">
-                                <rect key="frame" x="74" y="154" width="70" height="50"/>
+                                <rect key="frame" x="292" y="125" width="65" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.070588235294117646" green="0.77254901960784317" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="27"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="greenColorRequested:" destination="wH7-4e-WXP" eventType="touchUpInside" id="jAG-Sc-Wgg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2E-w1-8s2" userLabel="Yellow Button">
-                                <rect key="frame" x="142" y="154" width="70" height="50"/>
+                                <rect key="frame" x="231" y="124" width="65" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.99215686274509807" green="0.6705882352941176" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                <buttonConfiguration key="configuration" style="plain" image="circle.fill" catalog="system" title="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="27"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="yellowColorRequested:" destination="wH7-4e-WXP" eventType="touchUpInside" id="7nu-hC-j4A"/>
@@ -223,16 +230,17 @@
                         <viewLayoutGuide key="safeArea" id="twe-pq-zi2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2f4-9G-56k"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="2f4-9G-56k"/>
                     <connections>
                         <outlet property="greenButton" destination="zW1-Jf-l9f" id="ZzE-Kg-GAN"/>
+                        <outlet property="navItem" destination="2f4-9G-56k" id="uDE-h8-itI"/>
                         <outlet property="pinkButton" destination="uFA-uY-O1J" id="XBE-wT-Dtc"/>
                         <outlet property="yellowButton" destination="X2E-w1-8s2" id="TUX-gL-Xby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8m-jj-qUz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1691" y="80"/>
+            <point key="canvasLocation" x="1689.8550724637682" y="79.6875"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="0.0" blue="0.36862745098039218" alpha="0.86715525270000005" colorSpace="custom" customColorSpace="sRGB"/>

@@ -78,6 +78,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Check to see if time last accessed was over 10 minutes, if so, restart state, if not, dont
         if defaultValues.object(forKey: "lastTime") == nil || (defaultValues.value(forKey: "lastTime") as! Date).timeIntervalSinceNow * -1 / 60 >= 10 {
             defaultValues.set(tipControl.selectedSegmentIndex, forKey: "lastTipVal")
@@ -136,7 +137,27 @@ class ViewController: UIViewController {
         self.tipAmountLabel.font = UIFont(name: "Comfortaa", size: 34)
         self.bottomView.layer.cornerRadius = 10
         
-        self.view.backgroundColor = SettingsViewController.colorSelected
+        if SettingsViewController.colorSelected == UIColor.red {
+            switch (defaultValues.value(forKey: "lastColor") as! Int)  {
+              case 0:
+                self.view.backgroundColor = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
+                break
+            case 1:
+              self.view.backgroundColor = UIColor.init(red: 18/255, green: 197/255, blue: 151/255, alpha: 1)
+              break
+            case 2:
+                self.view.backgroundColor = UIColor.init(red: 253/255, green: 171/255, blue: 9/255, alpha: 1)
+              break
+            default:
+                break
+            }
+                
+        } else {
+            self.view.backgroundColor = SettingsViewController.colorSelected
+        }
+        //(defaultValues.value(forKey: "lastColor") ?? -1)
+        
+        defaultValues.set(SettingsViewController.colorSelectedAsNumber, forKey: "lastColor")
         
     }
     
@@ -163,6 +184,7 @@ class ViewController: UIViewController {
     
 
     func calculateTip(_ sender: Any) {
+        
         // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
         
