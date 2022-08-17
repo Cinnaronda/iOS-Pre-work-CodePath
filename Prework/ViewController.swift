@@ -149,6 +149,7 @@ class ViewController: UIViewController {
                 self.view.backgroundColor = UIColor.init(red: 253/255, green: 171/255, blue: 9/255, alpha: 1)
               break
             default:
+                self.view.backgroundColor = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
                 break
             }
                 
