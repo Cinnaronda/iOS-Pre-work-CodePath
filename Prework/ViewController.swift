@@ -138,19 +138,23 @@ class ViewController: UIViewController {
         self.bottomView.layer.cornerRadius = 10
         
         if SettingsViewController.colorSelected == UIColor.red {
-            switch (defaultValues.value(forKey: "lastColor") as! Int)  {
-              case 0:
-                self.view.backgroundColor = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
-                break
-            case 1:
-              self.view.backgroundColor = UIColor.init(red: 18/255, green: 197/255, blue: 151/255, alpha: 1)
-              break
-            case 2:
-                self.view.backgroundColor = UIColor.init(red: 253/255, green: 171/255, blue: 9/255, alpha: 1)
-              break
-            default:
-                self.view.backgroundColor = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
-                break
+            if defaultValues.value(forKey: "lastColor")  == nil {
+                self.view.backgroundColor = UIColor.init(red: 250/255, green: 80/255, blue: 116/255, alpha: 1)
+            } else {
+                switch (defaultValues.value(forKey: "lastColor") as! Int)  {
+                  case 0:
+                    self.view.backgroundColor = UIColor.init(red: 250/255, green: 80/255, blue: 116/255, alpha: 1)
+                    break
+                case 1:
+                  self.view.backgroundColor = UIColor.init(red: 18/255, green: 197/255, blue: 151/255, alpha: 1)
+                  break
+                case 2:
+                    self.view.backgroundColor = UIColor.init(red: 253/255, green: 171/255, blue: 9/255, alpha: 1)
+                  break
+                default:
+                    self.view.backgroundColor = UIColor.init(red: 250/255, green: 80/255, blue: 116/255, alpha: 1)
+                    break
+                }
             }
                 
         } else {

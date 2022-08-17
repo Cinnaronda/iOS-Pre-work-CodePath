@@ -42,7 +42,7 @@ class SettingsViewController: UIViewController {
         switch (SettingsViewController.colorSelectedAsNumber)  {
           case 0:
             pinkButton.setImage(UIImage(systemName: "dot.circle.fill"), for: UIControl.State.normal)
-            SettingsViewController.colorSelected = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
+            SettingsViewController.colorSelected = UIColor.init(red: 250/255, green: 80/255, blue: 116/255, alpha: 1)
             print("pink")
             break
         case 1:
@@ -64,7 +64,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func pinkColorRequested(_ sender: Any) {
-        SettingsViewController.colorSelected = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
+        SettingsViewController.colorSelected = UIColor.init(red: 250/255, green: 80/255, blue: 116/255, alpha: 1)
         
         yellowButton.setImage(UIImage(systemName: "circle.fill"), for: UIControl.State.normal)
         greenButton.setImage(UIImage(systemName: "circle.fill"), for: UIControl.State.normal)
@@ -74,7 +74,7 @@ class SettingsViewController: UIViewController {
         
         defaultValues.set(0, forKey: "lastColor2")
         
-        SettingsViewController.colorSelected = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
+        SettingsViewController.colorSelected = UIColor.init(red: 250/255, green: 80/255, blue: 116/255, alpha: 1)
 
     }
     
