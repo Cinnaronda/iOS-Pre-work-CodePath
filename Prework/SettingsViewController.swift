@@ -9,7 +9,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    static var colorSelected = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
+    static var colorSelected = UIColor.red
     
     static var colorSelectedAsNumber = 0
 
@@ -19,22 +19,44 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var yellowButton: UIButton!
     
+    @IBOutlet weak var navItem: UINavigationItem!
+    
+    let defaultValues = UserDefaults.standard
+
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if defaultValues.object(forKey: "lastColor2") == nil {
+            SettingsViewController.colorSelectedAsNumber = 0
+        } else {
+            
+                SettingsViewController.colorSelectedAsNumber =  defaultValues.value(forKey: "lastColor2") as! Int
+        }
         
         switch (SettingsViewController.colorSelectedAsNumber)  {
           case 0:
             pinkButton.setImage(UIImage(systemName: "dot.circle.fill"), for: UIControl.State.normal)
+            SettingsViewController.colorSelected = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
+            print("pink")
             break
         case 1:
           greenButton.setImage(UIImage(systemName: "dot.circle.fill"), for: UIControl.State.normal)
+            SettingsViewController.colorSelected = UIColor.init(red: 18/255, green: 197/255, blue: 151/255, alpha: 1)
           break
         case 2:
           yellowButton.setImage(UIImage(systemName: "dot.circle.fill"), for: UIControl.State.normal)
+            SettingsViewController.colorSelected = UIColor.init(red: 253/255, green: 171/255, blue: 9/255, alpha: 1)
           break
         default:
             break
         }
+        
         
         // Do any additional setup after loading the view.
       
@@ -49,6 +71,11 @@ class SettingsViewController: UIViewController {
         pinkButton.setImage(UIImage(systemName: "dot.circle.fill"), for: UIControl.State.normal)
         
         SettingsViewController.colorSelectedAsNumber = 0
+        
+        defaultValues.set(0, forKey: "lastColor2")
+        
+        SettingsViewController.colorSelected = UIColor.init(red: 229/255, green: 93/255, blue: 116/255, alpha: 1)
+
     }
     
     @IBAction func greenColorRequested(_ sender: Any) {
@@ -59,6 +86,11 @@ class SettingsViewController: UIViewController {
         greenButton.setImage(UIImage(systemName: "dot.circle.fill"), for: UIControl.State.normal)
         
         SettingsViewController.colorSelectedAsNumber = 1
+        
+        defaultValues.set(1, forKey: "lastColor2")
+        
+        SettingsViewController.colorSelected = UIColor.init(red: 18/255, green: 197/255, blue: 151/255, alpha: 1)
+
 
     }
     
@@ -70,6 +102,12 @@ class SettingsViewController: UIViewController {
         yellowButton.setImage(UIImage(systemName: "dot.circle.fill"), for: UIControl.State.normal)
         
         SettingsViewController.colorSelectedAsNumber = 2
+        
+        
+        defaultValues.set(2, forKey: "lastColor2")
+        
+        SettingsViewController.colorSelected = UIColor.init(red: 253/255, green: 171/255, blue: 9/255, alpha: 1)
+
 
     }
     /*
