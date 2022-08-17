@@ -10,6 +10,7 @@
 		A10A3BB428AC0B84007835B1 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A10A3BB128AC0B84007835B1 /* Comfortaa-Light.ttf */; };
 		A10A3BB528AC0B84007835B1 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A10A3BB228AC0B84007835B1 /* Comfortaa-Regular.ttf */; };
 		A10A3BB628AC0B84007835B1 /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A10A3BB328AC0B84007835B1 /* Comfortaa-Bold.ttf */; };
+		A12DDFA328ACC75F0048F115 /* AppIcons in Resources */ = {isa = PBXBuildFile; fileRef = A12DDFA228ACC75F0048F115 /* AppIcons */; };
 		A1E1446C28A651E8002460A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E1446B28A651E8002460A0 /* AppDelegate.swift */; };
 		A1E1446E28A651E8002460A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E1446D28A651E8002460A0 /* SceneDelegate.swift */; };
 		A1E1447028A651E8002460A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E1446F28A651E8002460A0 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		A10A3BB128AC0B84007835B1 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
 		A10A3BB228AC0B84007835B1 /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		A10A3BB328AC0B84007835B1 /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		A12DDFA228ACC75F0048F115 /* AppIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcons; sourceTree = "<group>"; };
 		A1E1446828A651E8002460A0 /* Tip Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E1446B28A651E8002460A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E1446D28A651E8002460A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				A1E1447128A651E8002460A0 /* Main.storyboard */,
 				A1E1449B28A745C4002460A0 /* SettingsViewController.swift */,
 				A1E1447428A651EC002460A0 /* Assets.xcassets */,
+				A12DDFA228ACC75F0048F115 /* AppIcons */,
 				A1E1447628A651EC002460A0 /* LaunchScreen.storyboard */,
 				A1E1447928A651EC002460A0 /* Info.plist */,
 			);
@@ -255,6 +258,7 @@
 				A1E1447828A651EC002460A0 /* LaunchScreen.storyboard in Resources */,
 				A10A3BB628AC0B84007835B1 /* Comfortaa-Bold.ttf in Resources */,
 				A1E1447528A651EC002460A0 /* Assets.xcassets in Resources */,
+				A12DDFA328ACC75F0048F115 /* AppIcons in Resources */,
 				A10A3BB528AC0B84007835B1 /* Comfortaa-Regular.ttf in Resources */,
 				A1E1447328A651E8002460A0 /* Main.storyboard in Resources */,
 			);
