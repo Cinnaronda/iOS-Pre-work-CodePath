@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [x] Added automatic calculation - when the user types it automatically calculates!
-- [x] Added different UI colors - pick what color you want the app!
+- [x] Added different UI colors - pick what color you want the app and have it remembered!
 
 ## Video Walkthrough
 
